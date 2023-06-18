@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/js/bootstrap-4.6.2-dist/bootstrap-4.6.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./src/css/navbar.css">
+    <title>Vivero</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar bg-body-tertiary green-gradient">
+        <div class="container-fluid d-flex justify-content-start">
+            <a class="navbar-brand text-dark" href="#">
+                <img src="./src/img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top ">
+                Vivero
+            </a>
+            <div class="dropdown">
+                <button class="btn bg-transparent dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-expanded="false">
+                    Árboles
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="./arboles_frutales.html">Frutales</a>
+                    <a class="dropdown-item" href="./arboles_maderables.html">Maderables</a>
+                    <a class="dropdown-item" href="./arboles_jardin.html">De jardin</a>
+                </div>
+            </div>
+
+            <div class="dropdown" style="position:relative">
+                <a href="#" class="dropdown-toggle text-dark" data-toggle="dropdown">Fertilizantes <span
+                        class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="trigger right-caret">Caldos vitaminicos</a>
+                        <ul class="dropdown-menu sub-menu">
+                            <li><a href="./insecticida_organico.html">Insecticida organico</a></li>
+                            <li>
+                                <a href="./choreque.html">Choreque</a>
+                                <!-- <ul class="dropdown-menu sub-menu">
+                                    <li><a href="#">Level 3</a></li>
+                                    <li><a href="#">Level 3</a></li>
+                                    <li>
+                                        <a class="trigger right-caret">Level 3</a>
+                                        <ul class="dropdown-menu sub-menu">
+                                            <li><a href="#">Level 4</a></li>
+                                            <li><a href="#">Level 4</a></li>
+                                            <li><a href="#">Level 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul> -->
+                            </li>
+                            <li><a href="./caldo_sulfacalcico.html">Caldo sulfacalcico</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./composta.html">Composta</a></li>
+                    <li><a href="./lixiviados.html">Lixiviados</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <a href="./contacto.html">
+                    <button class="btn bg-transparent" type="button" >
+                        Contacto
+                    </button>
+                </a>
+            </div>
+            <div class="dropdown">
+                <a href="./comprar.html">
+                    <button class="btn bg-transparent" type="button" >
+                        Comprar
+                    </button>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-index">
+        <h1 class="display-4">¡Bienvenido al vivero!</h1>
+        <p class="lead">En este sitio encontraras informacion util sobre todo tipo de plantas asi como la posibilidad de
+            adquirir algunas de nuestro catalogo</p>
+        <hr class="my-4">
+        <p>Los pagos en la plataforma se realizan de forma 100% segura, ¡sientase libre de explorar!.</p>
+        <a class="btn btn-primary btn-lg" href="#arboles" role="button">Continuar</a>
+    </div>
+
+    <!-- Main -->
+    <main class="container font-weight-bold ">
+        <!-- Arboles -->
+        <div class="row">
+            <div class="col-12">
+                <p class="text-center bold tags" id="arboles">Árboles</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem; ">
+                    <img src="./src/img/frutal-tree.jpg" style="height:22rem;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Arboles frutales</h5>
+                        <p class="card-text">Un árbol frutal es cualquier árbol productor de frutas, cuyas estructuras
+                            formadas por el óvulo maduro de una flor, contiene una o más semillas.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="./src/img/wooden-tree.jpg" style="height:22rem;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Arboles maderables</h5>
+                        <p class="card-text">Los árboles maderables son plantas de mediano o gran tamaño, los cuales son
+                            cultivados con la finalidad de extraer la madera para ser utilizada en determinados
+                            productos.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem; ">
+                    <img src="./src/img/garden-tree.jpg" class="card-img-top" style="height:22rem;" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Árboles de gardín</h5>
+                        <p class="card-text">Los arboles de jardin son plantas pequeñas o grandes, las cuales son
+                            cultivadas con la finalidad de decorar un espacio.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fertilizantes -->
+        <div class="row">
+            <div class="col-12">
+                <p class="text-center bold tags">Fertilizantes</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem; ">
+                    <img src="./src/img/plant1.jpg" style="height:22rem;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Caldos vitaminicos</h5>
+                        <p class="card-text">Son liquidos que pueden usarse para el cuidado de las plantas, como para
+                            cuidarlas de los insectos o fortalecerlas.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="./src/img/insecticida.jpg" style="height:22rem;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Insecticida</h5>
+                        <p class="card-text">Un insecticida es un compuesto químico utilizado para matar insectos. Es un
+                            tipo de biocida que es usado para exterminar las plagas que puedan afectar a una planta.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem; ">
+                    <img src="./src/img/lixiviado.png" class="card-img-top" style="height:22rem;" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Lixiviados</h5>
+                        <p class="card-text">El lixiviado orgánico es un líquido orgánico que se forma durante el
+                            proceso de transformación de degradación de la materia orgánica. Este proceso se da durante
+                            la fermentación y descomposición de la materia orgánica, como consecuencia de la filtración
+                            de agua procedente de las lluvias que percolan entre los residuos y arrastran compuestos
+                            químicos y materiales biológicos. </p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="./src/js/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./src/js/bootstrap-4.6.2-dist/bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $(".dropdown-menu > li > a.trigger").on("click", function (e) {
+                var current = $(this).next();
+                var grandparent = $(this).parent().parent();
+                if ($(this).hasClass('left-caret') || $(this).hasClass('right-caret'))
+                    $(this).toggleClass('right-caret left-caret');
+                grandparent.find('.left-caret').not(this).toggleClass('right-caret left-caret');
+                grandparent.find(".sub-menu:visible").not(current).hide();
+                current.toggle();
+                e.stopPropagation();
+            });
+            $(".dropdown-menu > li > a:not(.trigger)").on("click", function () {
+                var root = $(this).closest('.dropdown');
+                root.find('.left-caret').toggleClass('right-caret left-caret');
+                root.find('.sub-menu:visible').hide();
+            });
+        });
+    </script>
+</body>
+
+</html>

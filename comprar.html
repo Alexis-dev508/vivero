@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/js/bootstrap-4.6.2-dist/bootstrap-4.6.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./src/css/navbar.css">
+  <title>Vivero</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar bg-body-tertiary green-gradient">
+    <div class="container-fluid d-flex justify-content-start">
+      <a class="navbar-brand text-dark" href="#">
+        <img src="./src/img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top ">
+        Vivero
+      </a>
+      <div class="dropdown">
+        <button class="btn bg-transparent dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+          Árboles
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="./arboles_frutales.html">Frutales</a>
+          <a class="dropdown-item" href="./arboles_maderables.html">Maderables</a>
+          <a class="dropdown-item" href="./arboles_jardin.html">De jardin</a>
+        </div>
+      </div>
+
+      <div class="dropdown" style="position:relative">
+        <a href="#" class="dropdown-toggle text-dark" data-toggle="dropdown">Fertilizantes <span
+            class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="trigger right-caret">Caldos vitaminicos</a>
+            <ul class="dropdown-menu sub-menu">
+              <li><a href="./insecticida_organico.html">Insecticida organico</a></li>
+              <li>
+                <a href="./choreque.html">Choreque</a>
+                <!-- <ul class="dropdown-menu sub-menu">
+                                    <li><a href="#">Level 3</a></li>
+                                    <li><a href="#">Level 3</a></li>
+                                    <li>
+                                        <a class="trigger right-caret">Level 3</a>
+                                        <ul class="dropdown-menu sub-menu">
+                                            <li><a href="#">Level 4</a></li>
+                                            <li><a href="#">Level 4</a></li>
+                                            <li><a href="#">Level 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul> -->
+              </li>
+              <li><a href="./caldo_sulfacalcico.html">Caldo sulfacalcico</a></li>
+            </ul>
+          </li>
+          <li><a href="./composta.html">Composta</a></li>
+          <li><a href="./lixiviados.html">Lixiviados</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <a href="./contacto.html">
+          <button class="btn bg-transparent" type="button">
+            Contacto
+          </button>
+        </a>
+      </div>
+      <div class="dropdown">
+        <a href="./comprar.html">
+          <button class="btn bg-transparent" type="button">
+            Comprar
+          </button>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+  <!-- Jumbotron -->
+  <div class="jumbotron jumbotron-index jumbotron-2">
+    <h1 class="display-4">Formulario de compra</h1>
+    <p class="lead">En esta pagina podra introducir sus datos personales, asi como seleccionar los articulos que desea
+      comprar</p>
+    <hr class="my-4">
+    <p>Los pagos en la plataforma se realizan de forma 100% segura, ¡sientase libre de comprar!.</p>
+    <a class="btn btn-primary btn-lg" href="#formulario" role="button">Continuar</a>
+  </div>
+
+  <!-- Main -->
+  <main class="container font-weight-bold ">
+    <form id="formulario" action="./src/db/querys.php" method="post">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej. Vianney" required>
+      </div>
+      <div class="form-group">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Ej. Vega Vizcarra"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Ej. vianney@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="direccion">Direccion</label>
+        <input type="text" class="form-control" id="direccion" name="direccion"
+          placeholder="Ej. Barrio Argentina S/N, Topia, Durango" required>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Telefono</label>
+        <input type="tel" class="form-control" id="telefono" minlength="10" maxlength="10" name="telefono"
+          placeholder="Ej. 6182678842" required>
+      </div>
+
+      <!-- Arbol frutal -->
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <label for="frutal_tree">Arbol frutal a comprar</label>
+          <select class="form-control" id="frutal_tree" name="frutal_tree">
+            <option value="">Ninguno..</option>
+            <option value="120">Manzano - $120</option>
+            <option value="150">Durazno - $150</option>
+            <option value="200">Ciruelo - $200</option>
+          </select>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="cantidad_frutal">Cantidad</label>
+            <input type="text" class="form-control" value="1" min="1" minlength="1" id="cantidad_frutal"
+              name="cantidad_frutal" placeholder="Ej. 1">
+          </div>
+        </div>
+      </div>
+
+      <!-- Arbol maderable -->
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <label for="timber_tree">Arbol maderable a comprar</label>
+          <select class="form-control" id="timber_tree" name="timber_tree">
+            <option value="">Ninguno..</option>
+            <option value="80">Pino - $80</option>
+            <option value="90">Encino - $90</option>
+            <option value="110">Cedro - $110</option>
+          </select>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="cantidad_maderable">Cantidad</label>
+            <input type="number" class="form-control" value="1" min="1" minlength="1" id="cantidad_maderable"
+              name="cantidad_maderable" placeholder="Ej. 2">
+          </div>
+        </div>
+      </div>
+
+      <!-- Arbol de jardin -->
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <label for="garden_tree">Arbol de jardin a comprar</label>
+          <select class="form-control" id="garden_tree" name="garden_tree">
+            <option value="">Ninguno..</option>
+            <option value="180">Jacaranda - $180</option>
+            <option value="200">Magnolio - $200</option>
+            <option value="250">Olivo - $250</option>
+          </select>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="cantidad_jardin">Cantidad</label>
+            <input type="number" class="form-control" value="1" min="1" minlength="1" id="cantidad_jardin"
+              name="cantidad_jardin" placeholder="Ej. 3">
+          </div>
+        </div>
+
+      </div>
+
+      <label for="sin_seguro">Seguro de vida</label>
+      <div class="form-group container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input" checked id="sin_seguro" value="sin_seguro" name="seguro-radio-stacked"
+                required>
+              <label class="custom-control-label" for="sin_seguro">Sin seguro</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="un_mes" name="seguro-radio-stacked" value="un_mes" required>
+              <label class="custom-control-label" for="un_mes">Por un mes</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input" id="dos_mes" name="seguro-radio-stacked" value="dos_mes" required>
+              <label class="custom-control-label" for="dos_mes">Dos meses</label>
+            </div>
+
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input" id="tres_mes" name="seguro-radio-stacked" value="tres_mes" required>
+              <label class="custom-control-label" for="tres_mes">Tres meses</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input" id="cuatro_mes" name="seguro-radio-stacked" value="cuatro_mes" required>
+              <label class="custom-control-label" for="cuatro_mes">Cuatro meses</label>
+            </div>
+
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input" id="cinco_mes" name="seguro-radio-stacked" value="cinco_mes" required>
+              <label class="custom-control-label" for="cinco_mes">Cinco meses</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <label for="exampleFormControlInput1">Forma de pago</label>
+      <div class="form-group container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input" checked id="credito" name="pago-radio-stacked" value="credito" required>
+              <label class="custom-control-label" for="credito">Credito</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="contado" name="pago-radio-stacked" value="contado" required>
+              <label class="custom-control-label" for="contado">Contado</label>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input" id="paypal" name="pago-radio-stacked" value="paypal" required>
+              <label class="custom-control-label" for="paypal">Paypal</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <label for="exampleFormControlInput1">Entrega</label>
+      <div class="form-group container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input" checked id="domicilio" name="entrega-radio-stacked"
+                required>
+              <label class="custom-control-label" for="domicilio">Domicilio</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="vivero" name="entrega-radio-stacked" required>
+              <label class="custom-control-label" for="vivero">Vivero</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <label for="complementos_extra">Complementos extra</label>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" class="custom-control-input" id="foliar" name="complementos[]" value="foliar">
+            <label class="custom-control-label" for="foliar">1 Litro foliar - $60</label>
+          </div>
+          <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" class="custom-control-input" id="maceta" name="complementos[]" value="maceta">
+            <label class="custom-control-label" for="maceta">1 Maceta - $50</label>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" class="custom-control-input" id="fertilizante" name="complementos[]"
+              value="fertilizante">
+            <label class="custom-control-label" for="fertilizante">1 Kg fertilizante - $100</label>
+          </div>
+          <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" class="custom-control-input" id="tierra" name="complementos[]" value="tierra">
+            <label class="custom-control-label" for="tierra">1 Kg tierra - $30</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-5 mt-3">
+        <div class="col-6">
+          <button type="button" class="btn btn-danger w-100">Cancelar</button>
+        </div>
+        <div class="col-6">
+          <button type="submit" class="btn btn-primary w-100">Comprar</button>
+        </div>
+      </div>
+    </form>
+
+  </main>
+
+  <script src="./src/js/jquery/jquery-3.6.3.min.js"></script>
+  <script src="./src/js/bootstrap-4.6.2-dist/bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+  <script>
+    $(function () {
+      $(".dropdown-menu > li > a.trigger").on("click", function (e) {
+        var current = $(this).next();
+        var grandparent = $(this).parent().parent();
+        if ($(this).hasClass('left-caret') || $(this).hasClass('right-caret'))
+          $(this).toggleClass('right-caret left-caret');
+        grandparent.find('.left-caret').not(this).toggleClass('right-caret left-caret');
+        grandparent.find(".sub-menu:visible").not(current).hide();
+        current.toggle();
+        e.stopPropagation();
+      });
+      $(".dropdown-menu > li > a:not(.trigger)").on("click", function () {
+        var root = $(this).closest('.dropdown');
+        root.find('.left-caret').toggleClass('right-caret left-caret');
+        root.find('.sub-menu:visible').hide();
+      });
+    });
+  </script>
+</body>
+
+</html>
